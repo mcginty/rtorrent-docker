@@ -17,5 +17,5 @@ EXPOSE 51100
 EXPOSE 51101
 VOLUME /downloads
 
-CMD ["supervisord"]
+CMD ["rtorrent"]
 
