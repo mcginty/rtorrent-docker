@@ -1,0 +1,16 @@
+[Unit]
+Description=rtorrent docker container
+
+# TODO: find out how to require system-mode services in user-mode services
+# After=docker.service
+# Requires=docker.service
+
+[Service]
+# make sure a docker container exists
+ExecStart=/usr/bin/env USER=%u /home/orgy/rtorrent-docker/run-attached.sh
+ExecStop=-/usr/bin/env USER=%u /home/orgy/rtorrent-docker/stop.sh
+ExecStopPost=-/usr/bin/env USER=%u /home/orgy/rtorrent-docker/clean.sh
+Restart=always
+
+[Install]
+WantedBy=default.target
