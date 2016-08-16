@@ -1,4 +1,4 @@
 #!/bin/bash
-docker stop rtorrent-rutorrent
-docker rm -f rtorrent-rutorrent
+docker stop rtorrent-$USER
+docker rm -f rtorrent-$USER
 
