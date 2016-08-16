@@ -11,6 +11,7 @@ RUN apt-get update && \
 # add startup scripts and configs
 ADD startup-rtorrent.sh .rtorrent.rc /root/
 
+EXPOSE 40000
 EXPOSE 50000
 EXPOSE 50000/udp
 VOLUME /downloads
