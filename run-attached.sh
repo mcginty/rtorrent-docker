@@ -8,6 +8,7 @@ PORT=$((50000+$EUID))
 
 /usr/bin/docker run -t -a stdout -a stderr --name rtorrent-$USER \
   -p $PORT:50000 \
+  -p $PORT:50000/udp \
   -v ~/.socker:/root/sock \
   -v ~/rtorrent:/downloads \
   rtorrent
