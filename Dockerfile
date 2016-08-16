@@ -1,7 +1,6 @@
 FROM ubuntu:xenial
 USER root
 
-
 # install
 RUN apt-get update && \
     apt-get install \
@@ -12,7 +11,7 @@ RUN apt-get update && \
 # add startup scripts and configs
 ADD startup-rtorrent.sh .rtorrent.rc /root/
 
-EXPOSE 51100
+EXPOSE 50000
 VOLUME /downloads
 
 CMD ["rtorrent"]
