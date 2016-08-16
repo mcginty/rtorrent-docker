@@ -4,7 +4,9 @@ USER root
 
 # install
 RUN apt-get update && \
-    apt-get install -y --force-yes rtorrent && \
+    apt-get install \
+      -y --allow-downgrades --allow-remove-essential --allow-change-held-packages \
+      rtorrent && \
     rm -rf /var/lib/apt/lists/*
 
 # add startup scripts and configs
