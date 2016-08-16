@@ -111,7 +111,7 @@ schedule = low_diskspace,5,60,close_low_diskspace=100M
 # on_finished = move_complete,"execute=mv,-u,$d.get_base_path=,/home/kaonashi/downloads/complete/ ;d.set_directory=/home/kaonashi/downloads/complete/"
 
 # network.scgi.open_port = 127.0.0.1:51102
-scgi_port = 127.0.0.1:40000
+scgi_port = 0.0.0.0:40000
 #scgi_local = /root/sock/rtorrent-scgi.sock
 
 # encryption options, set to none (default) or any combination of the following:
